@@ -15,6 +15,9 @@ public class Frog_Jump {
 
     }
 
+
+    // Memoisation(Top-Down) Striver
+
     public static int frog_jump(int heights[],int[] dp,int index){
         if(index==0){
             return 0;
@@ -35,5 +38,26 @@ public class Frog_Jump {
         dp[index]=Math.min(left,right);
         return Math.min(left, right);
     }
+
+
+    // Tabulation
+    public static int frog_jump2(int heights[],int[] dp,int index){
+        int[] dp = new int[heights.length];
+        dp[0]=0;
+
+        int left=0;
+        int right = Integer.MAX_VALUE ;
+
+        for(int i=1;i<heights.length;i++){
+            left = dp[i-1]+ Math.abs(heights[i]-heights[i-1]);
+            if(i>1){
+                right = dp[i-2]+ Math.abs(heights[i]-heights[i-2]);
+            }
+            dp[i]= Math.min(left,right);
+        }
+        return dp[heights.length-1];
+
+    }
+
 
 }
