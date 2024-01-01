@@ -41,7 +41,7 @@ public class Frog_Jump {
 
 
     // Tabulation
-    public static int frog_jump2(int heights[],int[] dp,int index){
+    public static int frog_jump2(int heights[],int index){
         int[] dp = new int[heights.length];
         dp[0]=0;
 
