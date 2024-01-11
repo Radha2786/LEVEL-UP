@@ -30,12 +30,15 @@ public class _01Knapsack {
         int inclusion =0;
         int exclusion=0;
         if(capacity>=wt[index]){
-            inclusion = val[index]+ knapsack(wt,val,capacity-wt[index],index+1,dp);
+            inclusion = val[index]+ knapsack(wt,val,capacity-wt[index],index+1,dp);  // dp[capacity-wt[index][index+1]]
 
         }
         // exclusion
-        exclusion= knapsack(wt,val,capacity,index+1,dp);
+        exclusion= knapsack(wt,val,capacity,index+1,dp);  // dp[capacity][index+1]
         dp[capacity][index]= Math.max(inclusion,exclusion);
         return Math.max(inclusion,exclusion);
     }
+
+
+    // actual array m value ek index kam par present hogi weight array m cuz hum 1 extra assume krke chal rhe h(see diagram in copy)
 }
