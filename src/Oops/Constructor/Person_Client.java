@@ -3,12 +3,14 @@ package Oops.Constructor;
 public class Person_Client {
     public static void main(String[] args) {
         Person p = new Person("Hrithik", 22);
-        p.name="Kaju";
-        p.age=21;
+//        p.name="Kaju";
+//        p.age=21;
+        p.setName("Kaju");
+        p.setAge(22);  // setter and getter ke through hum private data members ko access kr skte hain
         p.fun();
         Person p1 = new Person("Pathak",23);
-        p1.name="Radha";
-        p1.age=20;
+//        p1.name="Radha";
+//        p1.age=20;
         p1.fun();
     }
 
