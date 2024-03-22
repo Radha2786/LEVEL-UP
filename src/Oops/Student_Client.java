@@ -3,6 +3,8 @@ package Oops;
 // This keyword , class , object
 public class Student_Client {
     public static void main(String[] args) {
+
+
         Student s= new Student();
         s.name="Harshi";
         s.age=21;

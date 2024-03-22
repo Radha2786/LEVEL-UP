@@ -1,4 +1,4 @@
-package Practice;
+package Recursion;
 import java.util.*;
 
 public class Pallindrome_Partitioning {
